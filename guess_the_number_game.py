@@ -11,7 +11,7 @@ sys.stdout.buffer.write(b"Enter the max number m: ")
 sys.stdout.flush()
 m = int(sys.stdin.buffer.readline())
 
-randomNumber = random.randint(n, m)
+random_number = random.randint(n, m)
 
 
 sys.stdout.buffer.write(f"You can try {MAX_ATTEMPT} times.\n".encode("UTF-8"))
@@ -24,7 +24,7 @@ for i in range(MAX_ATTEMPT):
     sys.stdout.buffer.write(b"Enter the number: ")
     sys.stdout.flush()
     guess_number = int(sys.stdin.buffer.readline())
-    if guess_number == randomNumber:
+    if guess_number == random_number:
         sys.stdout.buffer.write(b"You win!\n")
         sys.stdout.flush()
         break
